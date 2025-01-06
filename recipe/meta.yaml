@@ -10,21 +10,23 @@ source:
   sha256: 6e5061dfcadb5d094997652f19dee2c02609e96fc99e18ff0ab6e57953e3336e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - numpy
     - tqdm
     - opencv >=4.2.0
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - images_into_array
 
