@@ -1,13 +1,13 @@
 {% set name = "images-into-array" %}
-{% set version = "2.0.7" %}
+{% set version = "3.0.1" %}
 
 package:
   name: "{{ name|lower }}"
   version: "{{ version }}"
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 6e5061dfcadb5d094997652f19dee2c02609e96fc99e18ff0ab6e57953e3336e
+  url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/images_into_array-{{ version }}.tar.gz"
+  sha256: 34fe89c63f38be8e790ce5ccceb5e81801505bcb82dcd1c8bb98f2771f181da6
 
 build:
   number: 1
